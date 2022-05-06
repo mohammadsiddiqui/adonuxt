@@ -2,11 +2,12 @@
 	"name": "adonuxt5",
 	"version": "1.0.0",
 	"private": true,
+	"main": "build/server.js",
 	"scripts": {
 		"dev": "node ace serve --watch",
 		"debug": "node ace serve --watch --node-args=--inspect",
 		"build": "cross-env NODE_ENV=production nuxt build && node ace build --production",
-		"start": "node server.js"
+		"start": "node build/server.js"
 	},
 	"engines": {
 		"node": "16.x"
