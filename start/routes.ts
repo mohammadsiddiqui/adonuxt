@@ -24,4 +24,8 @@ Route.get("/api", async ({}) => {
 	return { msg: "api service" };
 });
 
+Route.get("/api/:name", async ({ params }) => {
+	return { msg: `Hello ${params.name}` };
+});
+
 Route.any("*", "NuxtController.render");
